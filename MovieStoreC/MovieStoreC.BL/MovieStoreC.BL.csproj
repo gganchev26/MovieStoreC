@@ -6,7 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-<<<<<<< HEAD
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
   </ItemGroup>
@@ -15,6 +14,4 @@
     <ProjectReference Include="..\MovieStoreC.DL\MovieStoreC.DL.csproj" />
   </ItemGroup>
 
-=======
->>>>>>> 5aa0808bae28cbe8b1c2c36a9262fcf921944919
 </Project>

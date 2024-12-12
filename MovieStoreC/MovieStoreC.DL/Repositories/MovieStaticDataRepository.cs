@@ -6,9 +6,14 @@ namespace MovieStoreC.DL.Repositories
 {
     internal class MovieStaticDataRepository : IMovieRepository
     {
+        public void Add(Movie movie)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Movie> GetAll()
         {
-<<<<<<< HEAD
+
             return StaticDb.Movie;
         }
 
@@ -18,17 +23,25 @@ namespace MovieStoreC.DL.Repositories
 
             return StaticDb.Movie
                 .FirstOrDefault(x => x.Id == id);
-=======
-            return StaticDb.Movies;
         }
     }
 
     internal class MovieMongoRepository : IMovieRepository
     {
+        public void Add(Movie movie)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Movie> GetAll()
         {
             return StaticDb.Movies;
->>>>>>> 5aa0808bae28cbe8b1c2c36a9262fcf921944919
+
+        }
+
+        public Movie? GetById(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

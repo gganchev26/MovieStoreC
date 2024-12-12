@@ -10,23 +10,25 @@ namespace MovieStoreC.Controllers
     [Route("[controller]")]
     public class BusinessController : ControllerBase
     {
-        private readonly IMoviesService _movieService;
-        private readonly IMapper _mapper;
+        private readonly IBusinessService _movieService;
 
-
-
-        public BusinessController(
-            IMoviesService movieService,
-            IMapper mapper)
+        public BusinessController(IBusinessService movieService)
         {
             _movieService = movieService;
-            _mapper = mapper;
         }
 
-        [HttpGet("GetAll")]
-        public IEnumerable<Movie> GetAll()
+        [HttpGet("GetAllDetailedMovies")]
+        public IActionResult GetAllDetailedMovies()
         {
-            return _movieService.GetAll();
+            var result = _movieService.GetAllMovies();
+
+            if (result != null && result.Count > 0)
+            {
+                return Ok(result);
+            }
+            return NotFound();
         }
     }
 }
+
+
