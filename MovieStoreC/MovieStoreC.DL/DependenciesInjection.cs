@@ -11,7 +11,8 @@ namespace MovieStoreC.DL
         {
             return 
                 services.AddSingleton<IMovieRepository,
-                    MovieStaticDataRepository>();
+                    MovieMongoRepository>();
+            
         }
     }
 }
