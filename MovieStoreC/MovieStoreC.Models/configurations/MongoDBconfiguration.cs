@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MovieStoreC.Models.configurations
 {
-    internal class MongoDBconfigurations
+    public class MongoDBconfiguration
     {
+
     }
 }
